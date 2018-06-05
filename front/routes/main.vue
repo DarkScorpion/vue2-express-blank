@@ -14,23 +14,25 @@
 </template>
 
 <script>
-
   export default {
     mounted() {
     },
 
     data() {
       return {
-
       }
     },
 
     methods: {
-
     }
 
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
+  @import '../vendors/bs/css/bootstrap.css'
+
+  a {
+    color green
+  }
 </style>

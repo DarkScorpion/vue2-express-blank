@@ -13,7 +13,6 @@
 </template>
 
 <script>
-  
   import simpleComponent from '../components/simpleComponent.vue'
 
   export default {

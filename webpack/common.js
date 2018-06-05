@@ -1,7 +1,6 @@
 
 var path = require('path');
-var webpack = require('webpack');
-var copyWebpackPlugin = require('copy-webpack-plugin');
+var extractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [ './front/main.js' ],
@@ -25,7 +24,8 @@ module.exports = {
         test: /\.(vue)$/,
         loader: 'vue-loader',
         options: {
-          loaders: {}
+          loaders: {},
+          extractCSS: true
         }
       }, {
         test: /\.(js)$/,
@@ -49,11 +49,7 @@ module.exports = {
   },
 
   plugins: [
-    new copyWebpackPlugin([{
-      to: 'vendors/',
-      from: 'vendors/',
-      context: path.resolve(__dirname, '../front/')
-    }]),
+    new extractTextPlugin('style.css'),
   ],
 
   performance: {

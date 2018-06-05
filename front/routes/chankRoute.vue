@@ -32,4 +32,7 @@
 </script>
 
 <style lang="stylus" scoped>
+  h3 {
+    color #9933CC
+  }
 </style>
