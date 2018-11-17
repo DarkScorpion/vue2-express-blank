@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "i:prod": "npm install --production",
-    "prodBuild": "npm run build && npm run prod",
+    "prodStart": "npm run build && npm run prod",
     "dev": "cross-env NODE_ENV=development node server/app.js",
     "prod": "cross-env NODE_ENV=production node server/app.js",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
